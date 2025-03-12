@@ -10,7 +10,11 @@ def matrix_dot_vector(a: list[list[int or float]], b: list[int or float]) -> lis
         result.append(total)
     return result
 
-print(matrix_dot_vector([[1, 2, 3], [2, 4, 5], [6, 8, 9]], [1, 2, 3]))
+
+a = [[1, 2, 3], [2, 4, 5], [6, 8, 9]]
+b = [1, 2, 3]
+
+print(matrix_dot_vector(a, b))
 
 # explanation:
 #  a = [[1, 2, 3],  b = [1, 2, 3]
