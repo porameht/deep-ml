@@ -1,6 +1,6 @@
-fn matrix_dot_vector(a: &[Vec<f64>], b: &[f64]) -> Result<Vec<64>, &'static str> {
-  if a.is_emthy() || a[0].len() != b.len() {
-    return Error("Dimension mismatch")
+fn matrix_dot_vector(a: &[Vec<f64>], b: &[f64]) -> Result<Vec<f64>, &'static str> {
+  if a.is_empty() || a[0].len() != b.len() {
+    return Err("Dimension mismatch")
   }
   
   let mut result = Vec::new();
@@ -12,7 +12,7 @@ fn matrix_dot_vector(a: &[Vec<f64>], b: &[f64]) -> Result<Vec<64>, &'static str>
     result.push(total);
   }
 
-  Ok(result);
+  Ok(result)
 }
 
 // Example usage and test
